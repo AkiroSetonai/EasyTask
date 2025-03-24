@@ -1,1 +1,16 @@
-<h2>{{ name }}</h2>
+<section id="tasks">
+  <header>
+    <h2>{{ name }} tarefas</h2>
+    <menu>
+      <button>Adicionar Tarefa</button>
+    </menu>
+  </header>
+
+  <ul>
+    @for (task of selectedUsertask; track task.id) {
+    <li>
+      <app-task />
+    </li>
+    }
+  </ul>
+</section>
